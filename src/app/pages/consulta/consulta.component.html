@@ -1,0 +1,20 @@
+<div class="shadow-sm p-3 my-5 bg-light rounded">
+    <div class="mb-3">
+        <label class="form-label">Ruc</label>
+        <input #ruc type="text" class="form-control" placeholder="20430635612">
+        <div class="form-text">Buscar comercio por RUC</div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="consultar(ruc.value)">Buscar</button>
+    <ng-container *ngIf="comercio">
+        <ul class="list-group my-4">
+            <li class="list-group-item">RUC: {{ comercio.ruc }}</li>
+            <li class="list-group-item">Razon social: {{ comercio.razon_social }}</li>
+            <li class="list-group-item">Estado: {{ comercio.estado }}</li>
+            <li class="list-group-item">Direccion: {{ comercio.direccion }}</li>
+            <li class="list-group-item">Ubigeo: {{ comercio.ubigeo }}</li>
+            <li class="list-group-item">Departamento: {{ comercio.departamento }}</li>
+            <li class="list-group-item">Provincia: {{ comercio.provincia }}</li>
+            <li class="list-group-item">Distrito: {{ comercio.distrito }}</li>
+        </ul>
+    </ng-container>
+</div>
